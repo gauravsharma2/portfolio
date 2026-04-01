@@ -39,7 +39,7 @@
                     <i class="fas fa-moon"></i>
                     <i class="fas fa-sun"></i>
                 </button>
-                <a href="Gaurav_Sharma.pdf" download class="btn-resume">
+                <a href="Gaurav_Sharma_Updated.pdf" download class="btn-resume">
                     <i class="fas fa-download"></i> Resume
                 </a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -213,34 +213,34 @@ me.<span class="code-func">say_hi</span>()</code></pre>
                         <ul class="panel-list">
                             <li>
                                 <i class="fas fa-caret-right"></i>
-                                Architected an intelligent document processing platform using <strong>Azure AI, OCR (Form Recognizer), LLMs, TensorFlow</strong>, and vector databases to extract financial and clinical data from large-scale PDFs — achieving <strong>97% automation rate</strong> in generating standardized JSON and EDI 835 outputs.
+                                Architected an end-to-end <strong>EOB (Explanation of Benefits) data pipeline</strong> using Python, Azure Document Intelligence, and Azure Blob Storage to automate extraction of financial and clinical data from payer-specific PDFs, generate normalized JSON domain models and <strong>HIPAA-compliant EDI 835 outputs</strong>, and post to a .NET backend API — <strong>eliminating 95% of manual data entry</strong> across 6+ insurance payers.
                             </li>
                             <li>
                                 <i class="fas fa-caret-right"></i>
-                                Designed scalable cloud-native microservices with <strong>Python, C++, Flask, Node.js, Docker, Kubernetes, and Terraform</strong>, enabling fault-tolerant ingestion of <strong>120K+ documents/day</strong> while reducing processing latency by <strong>40%</strong>.
+                                Engineered a dual-pipeline orchestration framework with <strong>concurrent processing (ThreadPoolExecutor + ProcessPoolExecutor)</strong>, file-system event monitoring (Watchdog), and payer-specific post-processing modules using a factory pattern — enabling automated ingestion, OCR extraction, EDI generation, and API submission with <strong>end-to-end processing latency under 30 seconds</strong> per document.
                             </li>
                             <li>
                                 <i class="fas fa-caret-right"></i>
-                                Led end-to-end system design including data flow modeling, API architecture, async workers, event-driven queues, and observability frameworks <strong>(OpenTelemetry, CloudWatch)</strong>, monitoring <strong>2,500+ daily pipeline events</strong> in real time.
+                                Built a <strong>SelfPay CSV integration subsystem</strong> with fuzzy token-based provider matching, continuous polling, and idempotent upsert logic against a RESTful API, supporting automated batch processing of payment records with real-time status transitions (Pending → Posted) and <strong>Azure Blob archival</strong> for full audit traceability.
                             </li>
                             <li>
                                 <i class="fas fa-caret-right"></i>
-                                Delivered a full-stack review UI using <strong>React and JavaScript</strong> with human-in-the-loop validation, reducing exception handling time by <strong>60%</strong>.
+                                Designed a stateless, containerized deployment architecture using <strong>Docker Compose</strong> with inter-service networking, environment-based secret injection, and a real-time <strong>FastAPI monitoring dashboard</strong> (port 9000) tracking pipeline throughput, error rates by category, and API health — providing operational visibility across <strong>2,500+ daily pipeline events</strong>.
                             </li>
                             <li>
                                 <i class="fas fa-caret-right"></i>
-                                Provided technical leadership through code reviews, architectural roadmap planning, mentoring junior engineers, and producing high-quality technical design documents and system architecture diagrams.
+                                Implemented a robust <strong>EDI 835 generation engine compliant with X12 005010X221</strong> standards, building ISA/GS/ST/BPR/CLP/SVC/CAS segments with payer-configurable adjustment codes (CO/PR), service-line matching, and multi-claim support — integrated with a structured archive system organizing outputs by date, payer, and EOB ID for downstream reconciliation.
                             </li>
                         </ul>
                         <div class="panel-tags">
-                            <span class="tag">Azure</span>
                             <span class="tag">Python</span>
-                            <span class="tag">LLMs</span>
+                            <span class="tag">Azure AI</span>
+                            <span class="tag">EDI 835</span>
                             <span class="tag">Docker</span>
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">React</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">Terraform</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">.NET</span>
+                            <span class="tag">HIPAA</span>
+                            <span class="tag">X12</span>
                         </div>
                     </div>
 
@@ -548,10 +548,10 @@ me.<span class="code-func">say_hi</span>()</code></pre>
                         <span class="project-label">Featured Project</span>
                         <h3>Intelligent Document Processing Platform</h3>
                         <p class="project-description">
-                            An AI-powered platform that ingests 120K+ healthcare documents daily, 
-                            extracting financial and clinical data using Azure OCR, LLMs, and TensorFlow. 
-                            Generates standardized EDI 835 outputs with 97% automation rate, backed by 
-                            a React-based human-in-the-loop review interface.
+                            An end-to-end EOB data pipeline using Python, Azure Document Intelligence, 
+                            and Azure Blob Storage, automating extraction from payer-specific PDFs to 
+                            generate HIPAA-compliant EDI 835 outputs. Features dual-pipeline orchestration, 
+                            FastAPI monitoring dashboard, and eliminates 95% of manual data entry across 6+ payers.
                         </p>
                         <div class="project-tech">
                             <span>Azure AI</span>
