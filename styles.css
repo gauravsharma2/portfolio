@@ -519,6 +519,32 @@ body:hover .cursor-glow {
     animation-delay: 0.6s;
 }
 
+.hero-profile-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid transparent;
+    background: var(--accent-gradient);
+    padding: 3px;
+    box-shadow: 0 0 40px rgba(108, 99, 255, 0.2), 0 0 80px rgba(108, 99, 255, 0.1);
+    animation: profileGlow 4s ease-in-out infinite alternate;
+}
+
+.hero-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+@keyframes profileGlow {
+    0% { box-shadow: 0 0 30px rgba(108, 99, 255, 0.2), 0 0 60px rgba(108, 99, 255, 0.05); }
+    100% { box-shadow: 0 0 40px rgba(78, 205, 196, 0.25), 0 0 80px rgba(78, 205, 196, 0.08); }
+}
+
 .code-window {
     background: var(--code-bg);
     border-radius: var(--radius-md);
@@ -765,6 +791,29 @@ body:hover .cursor-glow {
     position: relative;
     font-family: var(--font-primary);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tab-logo-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--accent-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: var(--accent-primary);
+    transition: all var(--transition-fast);
+}
+
+.tab-btn:hover .tab-logo-icon,
+.tab-btn.active .tab-logo-icon {
+    background: var(--accent-primary);
+    color: #fff;
 }
 
 .tab-btn::before {
@@ -794,6 +843,8 @@ body:hover .cursor-glow {
 
 .tab-panels {
     flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .tab-panel {
@@ -842,12 +893,14 @@ body:hover .cursor-glow {
     color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.7;
+    align-items: flex-start;
 }
 
 .panel-list li i {
     color: var(--accent-primary);
-    margin-top: 6px;
+    margin-top: 8px;
     flex-shrink: 0;
+    font-size: 0.7rem;
 }
 
 .panel-list li strong {
@@ -1015,6 +1068,13 @@ body:hover .cursor-glow {
     font-size: 4rem;
     color: var(--accent-primary);
     opacity: 0.6;
+    padding: 20px;
+}
+
+.project-image-placeholder svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
 }
 
 .project-overlay {
@@ -1574,6 +1634,11 @@ body:hover .cursor-glow {
         max-width: 500px;
     }
 
+    .hero-profile-image {
+        width: 160px;
+        height: 160px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
@@ -1639,6 +1704,11 @@ body:hover .cursor-glow {
         flex-direction: column;
     }
 
+    .hero-profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
     .hero-cta .btn {
         justify-content: center;
     }
@@ -1654,6 +1724,27 @@ body:hover .cursor-glow {
         border-bottom: 2px solid var(--border-color);
         overflow-x: auto;
         min-width: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .tab-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+
+    .tab-logo-icon {
+        width: 22px;
+        height: 22px;
+        font-size: 0.6rem;
+    }
+
+    .panel-list li {
+        font-size: 0.88rem;
     }
 
     .tab-btn::before {
