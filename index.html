@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Sharma | Software Engineer</title>
+    <meta name="description" content="Portfolio of Gaurav Sharma - Software Engineer specializing in cloud-native architectures, distributed systems, and AI/ML solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>GS<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="Gaurav_Sharma.pdf" download class="btn-resume">
+                    <i class="fas fa-download"></i> Resume
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-greeting">
+                <span class="greeting-line"></span>
+                <span class="greeting-text">Hello, I'm</span>
+            </div>
+            <h1 class="hero-name">
+                <span class="name-first">Gaurav</span>
+                <span class="name-last">Sharma</span>
+            </h1>
+            <div class="hero-title">
+                <span class="title-prefix">I build </span>
+                <span class="typed-text" id="typedText"></span>
+                <span class="typed-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Software Engineer with 5+ years of experience crafting scalable cloud-native systems, 
+                intelligent data pipelines, and AI-powered solutions. Currently engineering the future 
+                of healthcare technology.
+            </p>
+            <div class="hero-cta">
+                <a href="#experience" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/gaurav-sharma21/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/gauravsharma2" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:gaurav988021@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.udemy.com/user/gaurav-sharma-581/" target="_blank" rel="noopener noreferrer" aria-label="Udemy">
+                    <i class="fab fa-udemy fa-graduation-cap"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="code-title">gaurav.py</span>
+                </div>
+                <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">SoftwareEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-string">"Gaurav Sharma"</span>
+        <span class="code-param">self</span>.role = <span class="code-string">"Software Engineer"</span>
+        <span class="code-param">self</span>.languages = [
+            <span class="code-string">"Python"</span>, <span class="code-string">"Java"</span>,
+            <span class="code-string">"C++"</span>, <span class="code-string">"JavaScript"</span>,
+            <span class="code-string">"Go"</span>, <span class="code-string">"TypeScript"</span>
+        ]
+        <span class="code-param">self</span>.cloud = [
+            <span class="code-string">"Azure"</span>, <span class="code-string">"GCP"</span>, <span class="code-string">"AWS"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-func">say_hi</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">print</span>(<span class="code-string">"Let's build something great!"</span>)
+
+<span class="code-comment"># Ready to collaborate? 🚀</span>
+me = <span class="code-class">SoftwareEngineer</span>()
+me.<span class="code-func">say_hi</span>()</code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span> About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Software Engineer who thrives at the intersection of 
+                        <strong>distributed systems</strong>, <strong>cloud architecture</strong>, and 
+                        <strong>artificial intelligence</strong>. With a Master's degree from the 
+                        <strong>University of Texas at Dallas</strong> and industry experience spanning 
+                        healthcare tech, consumer electronics, and geospatial data, I bring a unique 
+                        perspective to every challenge I tackle.
+                    </p>
+                    <p>
+                        At <strong>Conifer Health Solutions</strong>, I'm currently architecting intelligent 
+                        document processing platforms that leverage Azure AI, LLMs, and computer vision to 
+                        automate healthcare data workflows at scale — processing 120K+ documents daily. 
+                        Previously, I engineered cloud migration frameworks at <strong>Tenet Healthcare</strong> 
+                        and built location intelligence systems at <strong>OPPO & OnePlus R&D</strong>.
+                    </p>
+                    <p>
+                        Beyond my full-time roles, I'm also an <strong>instructor on Udemy</strong>, where I've
+                        taught thousands of students DSA and algorithms. I hold a <strong>5-star Gold Level</strong>
+                        coding badge and have been recognized as <strong>Employee of the Month</strong> multiple times.
+                        I'm always exploring new AI research and mentoring aspiring engineers.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card" data-count="5">
+                        <div class="stat-number"><span class="counter">0</span>+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card" data-count="120">
+                        <div class="stat-number"><span class="counter">0</span>K+</div>
+                        <div class="stat-label">Docs/Day Processed</div>
+                    </div>
+                    <div class="stat-card" data-count="4">
+                        <div class="stat-number"><span class="counter">0</span></div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-card" data-count="3">
+                        <div class="stat-number"><span class="counter">0</span></div>
+                        <div class="stat-label">Patents</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> Experience
+            </h2>
+            <div class="experience-tabs">
+                <div class="tab-list" role="tablist">
+                    <button class="tab-btn active" data-tab="conifer" role="tab">Conifer Health</button>
+                    <button class="tab-btn" data-tab="tenet" role="tab">Tenet Healthcare</button>
+                    <button class="tab-btn" data-tab="oppo" role="tab">OPPO & OnePlus</button>
+                    <button class="tab-btn" data-tab="here" role="tab">HERE Technologies</button>
+                    <button class="tab-btn" data-tab="udemy" role="tab">Udemy</button>
+                    <button class="tab-btn" data-tab="thinkanalytics" role="tab">ThinkAnalytics</button>
+                </div>
+                <div class="tab-panels">
+                    <!-- Conifer -->
+                    <div class="tab-panel active" id="conifer" role="tabpanel">
+                        <div class="panel-header">
+                            <h3>Software Engineer <span class="company-highlight">@ Conifer Health Solutions</span></h3>
+                            <span class="panel-date"><i class="far fa-calendar-alt"></i> Jun 2025 – Present</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Architected an intelligent document processing platform using <strong>Azure AI, OCR (Form Recognizer), LLMs, TensorFlow</strong>, and vector databases to extract financial and clinical data from large-scale PDFs — achieving <strong>97% automation rate</strong> in generating standardized JSON and EDI 835 outputs.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Designed scalable cloud-native microservices with <strong>Python, C++, Flask, Node.js, Docker, Kubernetes, and Terraform</strong>, enabling fault-tolerant ingestion of <strong>120K+ documents/day</strong> while reducing processing latency by <strong>40%</strong>.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Led end-to-end system design including data flow modeling, API architecture, async workers, event-driven queues, and observability frameworks <strong>(OpenTelemetry, CloudWatch)</strong>, monitoring <strong>2,500+ daily pipeline events</strong> in real time.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Delivered a full-stack review UI using <strong>React and JavaScript</strong> with human-in-the-loop validation, reducing exception handling time by <strong>60%</strong>.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Provided technical leadership through code reviews, architectural roadmap planning, mentoring junior engineers, and producing high-quality technical design documents and system architecture diagrams.
+                            </li>
+                        </ul>
+                        <div class="panel-tags">
+                            <span class="tag">Azure</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">LLMs</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">React</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Terraform</span>
+                        </div>
+                    </div>
+
+                    <!-- Tenet -->
+                    <div class="tab-panel" id="tenet" role="tabpanel">
+                        <div class="panel-header">
+                            <h3>Software Engineer <span class="company-highlight">@ Tenet Healthcare</span></h3>
+                            <span class="panel-date"><i class="far fa-calendar-alt"></i> Jun 2024 – May 2025</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Led the architecture and development of a metadata-driven migration framework to extract data from <strong>IBM DB2 legacy systems</strong>, transform pipelines using Python, and migrate assets into <strong>GCP BigQuery</strong> with zero-downtime ACE replication.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Built a schema-as-code automation framework integrating <strong>GitOps, SQL DDL generation, and metadata validation</strong>, reducing schema inconsistency and manual intervention by <strong>95%</strong>.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Developed distributed ingestion workflows using <strong>Airflow, Dockerized Python microservices, and GCP services</strong> to scale data ingestion throughput by <strong>4x</strong> and improve operational reliability.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Designed a reporting and analytics layer using <strong>BigQuery, GCS, and Power BI</strong> to deliver enterprise dashboards, automate KPI generation, and reduce manual reporting workload by <strong>70%</strong>.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Integrated <strong>LLMs and GenAI capabilities (OpenAI, Hugging Face, Vertex AI)</strong> into data quality and summarization pipelines, modernizing legacy ETL systems.
+                            </li>
+                        </ul>
+                        <div class="panel-tags">
+                            <span class="tag">GCP</span>
+                            <span class="tag">BigQuery</span>
+                            <span class="tag">Airflow</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">GenAI</span>
+                        </div>
+                    </div>
+
+                    <!-- OPPO & OnePlus -->
+                    <div class="tab-panel" id="oppo" role="tabpanel">
+                        <div class="panel-header">
+                            <h3>Senior Software Engineer <span class="company-highlight">@ OPPO & OnePlus R&D</span></h3>
+                            <span class="panel-date"><i class="far fa-calendar-alt"></i> Aug 2020 – Jul 2023</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Built a robust location information processing system using <strong>Python and GoLang</strong>, integrating India's NaVIC satellite navigation with OnePlus/OPPO GPS systems — improving location accuracy by <strong>50%</strong> for millions of users.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Designed and shipped <strong>ColorOS LOG ANALYZER</strong> — an internal diagnostic tool using <strong>Java, Python, and TypeScript</strong> with design patterns, reducing engineer debugging workload by <strong>10x</strong> and boosting team efficiency by <strong>20%</strong>. Validated improvements through rigorous A/B testing.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Optimized NFC performance by fine-tuning RF parameters across OnePlus and OPPO smartphone lines, achieving a <strong>40% increase in NFC payment range</strong> and <strong>25% boost in transaction efficiency</strong>, directly enhancing mobile payment UX for global users.
+                            </li>
+                        </ul>
+                        <div class="panel-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">GoLang</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">NFC</span>
+                            <span class="tag">GPS/NaVIC</span>
+                            <span class="tag">A/B Testing</span>
+                        </div>
+                    </div>
+
+                    <!-- HERE Technologies -->
+                    <div class="tab-panel" id="here" role="tabpanel">
+                        <div class="panel-header">
+                            <h3>Software Engineer Intern <span class="company-highlight">@ HERE Technologies</span></h3>
+                            <span class="panel-date"><i class="far fa-calendar-alt"></i> Jan 2020 – Jun 2020</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Integrated batch processing pipelines for Big Data using <strong>MapReduce and Apache Spark</strong>, engineering solutions to handle processing at the scale of <strong>1 billion+ records</strong>.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Implemented high-performance deduplication algorithms for map-based geospatial data, reducing processing time from <strong>50ms to 30ms (40% improvement)</strong> while achieving <strong>93% annotation accuracy</strong>.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Developed intelligent chatbots using <strong>Microsoft Bot Framework (C#)</strong>, integrating <strong>Microsoft LUIS and Google Dialogflow</strong> for natural language understanding and conversational AI capabilities.
+                            </li>
+                        </ul>
+                        <div class="panel-tags">
+                            <span class="tag">Apache Spark</span>
+                            <span class="tag">MapReduce</span>
+                            <span class="tag">Big Data</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Chatbots</span>
+                        </div>
+                    </div>
+
+                    <!-- Udemy -->
+                    <div class="tab-panel" id="udemy" role="tabpanel">
+                        <div class="panel-header">
+                            <h3>Instructor <span class="company-highlight">@ Udemy</span></h3>
+                            <span class="panel-date"><i class="far fa-calendar-alt"></i> May 2019 – Jun 2023</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Created and published comprehensive courses on <strong>Data Structures, Algorithms, and problem-solving techniques</strong>, reaching thousands of students globally.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Developed practice test courses with real-world coding challenges, helping students master <strong>DSA concepts</strong> and prepare for technical interviews at top tech companies.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Built a reputation as a highly-rated instructor, consistently receiving positive reviews for clear explanations and practical approach to teaching complex CS concepts.
+                            </li>
+                        </ul>
+                        <div class="panel-tags">
+                            <span class="tag">DSA</span>
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Teaching</span>
+                            <span class="tag">Course Design</span>
+                        </div>
+                    </div>
+
+                    <!-- ThinkAnalytics -->
+                    <div class="tab-panel" id="thinkanalytics" role="tabpanel">
+                        <div class="panel-header">
+                            <h3>Full Stack Developer Intern <span class="company-highlight">@ ThinkAnalytics</span></h3>
+                            <span class="panel-date"><i class="far fa-calendar-alt"></i> Nov 2019 – Dec 2019</span>
+                        </div>
+                        <ul class="panel-list">
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Developed front-end website architecture and designed interactive user interfaces, ensuring <strong>cross-platform optimization</strong> for mobile and desktop devices.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Built back-end website applications with <strong>servers and databases</strong> for full product functionality, implementing RESTful APIs for seamless front-end integration.
+                            </li>
+                            <li>
+                                <i class="fas fa-caret-right"></i>
+                                Designed and developed <strong>APIs</strong> for the product platform, contributing to the full software development lifecycle from concept to deployment.
+                            </li>
+                        </ul>
+                        <div class="panel-tags">
+                            <span class="tag">Full Stack</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> Skills & Technologies
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="expert">Python</span>
+                        <span class="skill-tag" data-level="expert">Java</span>
+                        <span class="skill-tag" data-level="expert">C++</span>
+                        <span class="skill-tag" data-level="expert">JavaScript</span>
+                        <span class="skill-tag" data-level="advanced">TypeScript</span>
+                        <span class="skill-tag" data-level="advanced">Go</span>
+                        <span class="skill-tag" data-level="advanced">C#</span>
+                        <span class="skill-tag" data-level="intermediate">R</span>
+                        <span class="skill-tag" data-level="intermediate">Ruby</span>
+                        <span class="skill-tag" data-level="advanced">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="expert">Azure</span>
+                        <span class="skill-tag" data-level="expert">GCP</span>
+                        <span class="skill-tag" data-level="advanced">AWS</span>
+                        <span class="skill-tag" data-level="expert">Docker</span>
+                        <span class="skill-tag" data-level="expert">Kubernetes</span>
+                        <span class="skill-tag" data-level="advanced">Terraform</span>
+                        <span class="skill-tag" data-level="advanced">GitOps</span>
+                        <span class="skill-tag" data-level="advanced">CI/CD</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data & Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="expert">BigQuery</span>
+                        <span class="skill-tag" data-level="expert">MySQL</span>
+                        <span class="skill-tag" data-level="advanced">Oracle</span>
+                        <span class="skill-tag" data-level="advanced">NoSQL</span>
+                        <span class="skill-tag" data-level="expert">Apache Spark</span>
+                        <span class="skill-tag" data-level="expert">Apache Airflow</span>
+                        <span class="skill-tag" data-level="advanced">Kafka</span>
+                        <span class="skill-tag" data-level="advanced">Hadoop</span>
+                        <span class="skill-tag" data-level="advanced">Snowflake</span>
+                        <span class="skill-tag" data-level="advanced">Hive</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="expert">TensorFlow</span>
+                        <span class="skill-tag" data-level="expert">LLMs</span>
+                        <span class="skill-tag" data-level="advanced">OpenAI</span>
+                        <span class="skill-tag" data-level="advanced">Hugging Face</span>
+                        <span class="skill-tag" data-level="advanced">Vertex AI</span>
+                        <span class="skill-tag" data-level="advanced">Computer Vision</span>
+                        <span class="skill-tag" data-level="advanced">NLP</span>
+                        <span class="skill-tag" data-level="advanced">GANs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="expert">React</span>
+                        <span class="skill-tag" data-level="advanced">Node.js</span>
+                        <span class="skill-tag" data-level="expert">Flask</span>
+                        <span class="skill-tag" data-level="advanced">Ruby on Rails</span>
+                        <span class="skill-tag" data-level="advanced">Apache Beam</span>
+                        <span class="skill-tag" data-level="expert">Git</span>
+                        <span class="skill-tag" data-level="advanced">JIRA</span>
+                        <span class="skill-tag" data-level="advanced">Power BI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Architecture</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="expert">Microservices</span>
+                        <span class="skill-tag" data-level="expert">System Design</span>
+                        <span class="skill-tag" data-level="expert">REST APIs</span>
+                        <span class="skill-tag" data-level="advanced">Event-Driven</span>
+                        <span class="skill-tag" data-level="advanced">ETL Pipelines</span>
+                        <span class="skill-tag" data-level="advanced">Observability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">04.</span> Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <!-- Project 1: IDP Platform -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-link-label">Enterprise Project</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-label">Featured Project</span>
+                        <h3>Intelligent Document Processing Platform</h3>
+                        <p class="project-description">
+                            An AI-powered platform that ingests 120K+ healthcare documents daily, 
+                            extracting financial and clinical data using Azure OCR, LLMs, and TensorFlow. 
+                            Generates standardized EDI 835 outputs with 97% automation rate, backed by 
+                            a React-based human-in-the-loop review interface.
+                        </p>
+                        <div class="project-tech">
+                            <span>Azure AI</span>
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>React</span>
+                            <span>Kubernetes</span>
+                            <span>Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Migration Framework -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-link-label">Enterprise Project</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-label">Featured Project</span>
+                        <h3>Cloud Migration & Data Platform</h3>
+                        <p class="project-description">
+                            A metadata-driven migration framework enabling zero-downtime data extraction 
+                            from IBM DB2 legacy systems to GCP BigQuery. Includes schema-as-code automation 
+                            with GitOps, distributed Airflow ingestion workflows (4x throughput), and an 
+                            enterprise analytics layer with Power BI dashboards.
+                        </p>
+                        <div class="project-tech">
+                            <span>GCP</span>
+                            <span>BigQuery</span>
+                            <span>Airflow</span>
+                            <span>Docker</span>
+                            <span>GitOps</span>
+                            <span>Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: NaVIC -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-header">
+                            <i class="fas fa-folder-open project-folder"></i>
+                            <span class="project-link-label">Industry Project</span>
+                        </div>
+                        <h3>NaVIC-GPS Integration System</h3>
+                        <p>Engineered a location processing system integrating India's NaVIC satellite 
+                           navigation with smartphone GPS, improving positioning accuracy by 50% for 
+                           millions of OnePlus/OPPO users globally.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>GoLang</span>
+                            <span>GPS</span>
+                            <span>NaVIC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Face Aging -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-header">
+                            <i class="fas fa-folder-open project-folder"></i>
+                        </div>
+                        <h3>Face Aging with CycleGANs</h3>
+                        <p>Built a deep learning model using Cyclic GANs for image-to-image age transformation, 
+                           trained on 100,000+ images from the UTKFace dataset. Achieved 95% accuracy in 
+                           mapping realistic age progression in facial images.</p>
+                        <div class="project-tech">
+                            <span>CycleGAN</span>
+                            <span>Keras</span>
+                            <span>CNN</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: ColorOS Log Analyzer -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-header">
+                            <i class="fas fa-folder-open project-folder"></i>
+                            <span class="project-link-label">Industry Project</span>
+                        </div>
+                        <h3>ColorOS Log Analyzer</h3>
+                        <p>Designed an internal diagnostic tool for OPPO's ColorOS platform that reduced 
+                           engineer debugging workload by 10x and boosted team efficiency by 20%. 
+                           Validated through rigorous A/B testing methodologies.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>TypeScript</span>
+                            <span>Design Patterns</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Big Data Pipeline -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-header">
+                            <i class="fas fa-folder-open project-folder"></i>
+                        </div>
+                        <h3>Billion-Scale Data Pipeline</h3>
+                        <p>Built batch processing pipelines using MapReduce and Apache Spark handling 
+                           1B+ records. Implemented geospatial deduplication algorithms achieving 93% 
+                           accuracy and 40% processing time reduction.</p>
+                        <div class="project-tech">
+                            <span>Apache Spark</span>
+                            <span>MapReduce</span>
+                            <span>Big Data</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section publications" id="publications">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">05.</span> Publications & Patents
+            </h2>
+            <div class="publications-grid">
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-type">Research Paper</div>
+                    <h3>Mine and Lattice Web Data using NLP</h3>
+                    <p class="pub-venue"><i class="fas fa-book"></i> Elsevier | Paper ID: B71450711222</p>
+                    <p class="pub-description">
+                        Explored advanced natural language processing techniques for mining and structuring 
+                        web-based lattice data, contributing to the field of automated information extraction.
+                    </p>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-type">Research Paper</div>
+                    <h3>Analysis of COVID-19 Chest X-ray Data</h3>
+                    <p class="pub-venue"><i class="fas fa-book"></i> Published Research</p>
+                    <p class="pub-description">
+                        Developed an ensemble of convolutional neural network architectures for analyzing 
+                        COVID-19 chest X-ray data, contributing to early detection methodologies during the pandemic.
+                    </p>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-type">Research Paper</div>
+                    <h3>Mental Health Prediction in Corporate Sector</h3>
+                    <p class="pub-venue"><i class="fas fa-book"></i> Published Research</p>
+                    <p class="pub-description">
+                        Applied machine learning and data analysis techniques to predict mental health trends 
+                        in corporate environments, contributing to workplace wellness and employee wellbeing research.
+                    </p>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-type">Research Paper</div>
+                    <h3>Multimedia Colorization</h3>
+                    <p class="pub-venue"><i class="fas fa-book"></i> Published Research</p>
+                    <p class="pub-description">
+                        Developed deep learning approaches for automatic colorization of multimedia content, 
+                        leveraging CNN architectures for realistic and context-aware color synthesis.
+                    </p>
+                </div>
+                <div class="pub-card patent">
+                    <div class="pub-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="pub-type">Patent</div>
+                    <h3>Device Tracking using Secure Element</h3>
+                    <p class="pub-venue"><i class="fas fa-award"></i> CN 2021109573901 | Issued Aug 20, 2021</p>
+                    <p class="pub-description">
+                        Invented a novel method for device tracking leveraging secure element technology, 
+                        enhancing device security and location capabilities for consumer electronics.
+                    </p>
+                </div>
+                <div class="pub-card patent">
+                    <div class="pub-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="pub-type">Patent</div>
+                    <h3>Audio Thumbnail</h3>
+                    <p class="pub-venue"><i class="fas fa-award"></i> Filed Patent</p>
+                    <p class="pub-description">
+                        Designed a system for generating representative audio thumbnails, enabling 
+                        efficient audio content previewing and navigation for media applications.
+                    </p>
+                </div>
+                <div class="pub-card patent">
+                    <div class="pub-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="pub-type">Patent</div>
+                    <h3>Protective Gear Prediction for Smartphones & Wearables</h3>
+                    <p class="pub-venue"><i class="fas fa-award"></i> Filed Patent</p>
+                    <p class="pub-description">
+                        Invented an intelligent system for predicting optimal protective gear configurations 
+                        for smartphones and wearable devices using sensor data and ML algorithms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">06.</span> Certifications & Honors
+            </h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h3>Machine Learning</h3>
+                    <p>Professional Certification</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Professional Certification</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-code"></i></div>
+                    <h3>30 Days of Code</h3>
+                    <p>Coding Challenge Certification</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python Libraries</h3>
+                    <p>Professional Certification</p>
+                </div>
+                <div class="cert-card honor">
+                    <div class="cert-icon"><i class="fas fa-star"></i></div>
+                    <h3>5-Star Gold Level Coder</h3>
+                    <p>HackerRank Achievement</p>
+                </div>
+                <div class="cert-card honor">
+                    <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Employee of the Month</h3>
+                    <p>Awarded multiple times at OnePlus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">07.</span> Education
+            </h2>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>Master of Science in Computer Science</h3>
+                        <p class="edu-school">University of Texas at Dallas</p>
+                        <span class="edu-date"><i class="far fa-calendar-alt"></i> Aug 2023 – May 2025</span>
+                        <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Dallas, Texas, USA</p>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p class="edu-school">Birla Institute of Technology</p>
+                        <span class="edu-date"><i class="far fa-calendar-alt"></i> Aug 2016 – May 2020</span>
+                        <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Mesra, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">08.</span> Get In Touch
+            </h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    I'm always open to discussing new opportunities, innovative ideas, or ways to 
+                    contribute to impactful projects. Whether you have a question, a proposal, or 
+                    just want to connect — my inbox is always open.
+                </p>
+                <div class="contact-cards">
+                    <a href="mailto:gaurav988021@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gaurav-sharma21/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/gauravsharma2" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <a href="mailto:gaurav988021@gmail.com" class="btn btn-primary btn-lg">
+                    <span>Say Hello</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Designed & Built by <strong>Gaurav Sharma</strong></p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/gaurav-sharma21/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/gauravsharma2" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:gaurav988021@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
